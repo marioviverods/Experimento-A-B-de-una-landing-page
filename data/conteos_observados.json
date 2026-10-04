@@ -1,0 +1,45 @@
+{
+  "provenance": "Conteos transcritos de las salidas guardadas del notebook aportado; no son microdatos ni una nueva extracción.",
+  "landing": {
+    "A": [
+      17470,
+      2512
+    ],
+    "B": [
+      16824,
+      3194
+    ]
+  },
+  "traffic_source": {
+    "Ads": [
+      10176,
+      1759
+    ],
+    "Email": [
+      5205,
+      918
+    ],
+    "Organic": [
+      15507,
+      2480
+    ],
+    "Referral": [
+      3406,
+      549
+    ]
+  },
+  "user_type": {
+    "Nuevo": [
+      22295,
+      3738
+    ],
+    "Recurrente": [
+      11999,
+      1968
+    ]
+  },
+  "columns": [
+    "no_convirtio",
+    "convirtio"
+  ]
+}
