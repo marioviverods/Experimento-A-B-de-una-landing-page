@@ -51,13 +51,12 @@ El análisis de gasto original usa Student con varianzas iguales por defecto, so
 4. Mantener abierta la evaluación de segmentos. Para saber si B funciona distinto por canal o tipo se necesitan cruces con la versión o pruebas de interacción, ausentes en los conteos disponibles.
 
 ## Qué puede reproducirse
-
-El [notebook principal](notebooks/analisis_conversion.ipynb) **se ejecutó en esta revisión** con conteos transcritos de las salidas del notebook original. Recalcula conversión, chi-cuadrada, intervalos, tasas por segmento y un chequeo de reparto condicional a un diseño 50/50.
+   El [notebook principal](notebooks/analisis_conversion.ipynb) recalcula conversión, chi-cuadrada, intervalos de confianza, tasas por segmento y un chequeo de reparto bajo un diseño 50/50. Parte de los conteos observados del experimento (`data/conteos_observados.json`), transcritos de las salidas del notebook original.
 
 El [notebook original documentado](notebooks/analisis_original_documentado.ipynb) conserva el código y sus salidas históricas, sin consignas ni comentarios de revisión. **No fue ejecutado de nuevo**: necesita `landing_experiment.csv`, que no fue adjuntado. El original recibido se conserva sin cambios fuera de esta copia de portafolio.
 
-El [script complementario](validar_microdatos.py) añade verificaciones y Welch sobre gasto de todos los usuarios. Es una propuesta de revisión pendiente de ejecución con el CSV real; no se presenta como trabajo histórico ya realizado.
-
+   El [script complementario](validar_microdatos.py) agrega verificaciones de los datos y una prueba de Welch sobre el gasto de todos los usuarios. No se ha ejecutado porque requiere el CSV original, que no se incluye en el repositorio.
+   
 ## Uso
 
 1. Instala las dependencias: `python -m pip install -r requirements.txt`.
@@ -68,6 +67,8 @@ Para ejecutar los análisis individuales, coloca la fuente en `data/landing_expe
 
 ## Validación y límites
 
+   Proyecto académico presentado como caso de análisis; no corresponde a un experimento realizado para una empresa real.
+   
 Los conteos de cada tabla suman 40,000 usuarios y 5,706 conversiones, y reproducen las tres chi-cuadradas guardadas. El original reporta 40,000 identificadores únicos y ninguna celda nula, pero no se comprobó de nuevo sin la fuente. No hay evidencia de una verificación completa de supuestos de la prueba de gasto.
 
 El chequeo de tamaños arroja p ≈0.857 **si** el diseño esperado era 50/50; no demuestra aleatorización ni balance de características. La interpretación inferencial presupone independencia y un experimento correctamente implementado. No se documentaron asignación, potencia, horizonte predefinido ni monitoreo secuencial. Las pruebas segmentadas reúnen A y B y no evalúan efectos heterogéneos.
