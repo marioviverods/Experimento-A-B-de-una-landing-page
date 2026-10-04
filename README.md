@@ -1,4 +1,4 @@
-# Experimento A/B: validación de una landing page
+# Experimento A/B de una landing page
 
 **Mario Alberto Vivero Sahagún | Python · pandas · SciPy · Matplotlib**
 
