@@ -1,12 +1,20 @@
 # Experimento A/B: validación de una landing page
 
-**Mario Alberto Vivero | Python · pandas · SciPy · Matplotlib**
+**Mario Alberto Vivero Sahagún | Python · pandas · SciPy · Matplotlib**
 
-Proyecto académico para comparar la conversión entre dos versiones de página y explorar diferencias por canal y tipo de usuario. **40,000 usuarios**, del **1 al 28 de enero de 2026**, según las salidas del notebook original.
+Comparación de la tasa de conversión entre dos versiones de una página, con 40,000 usuarios del 1 al 28 de enero de 2026, y exploración de diferencias por canal y tipo de usuario.
 
-## Decisión de negocio
+## Pregunta de negocio
 
-La versión B presenta una mayor conversión. La recomendación es evaluar un despliegue gradual después de validar la asignación experimental y las métricas económicas. Los resultados por canal no bastan para reasignar presupuesto, y la ausencia de significancia por tipo de usuario no demuestra equivalencia.
+¿La versión B de la página convierte más usuarios que la versión A, y esa diferencia es estadísticamente significativa?
+
+## Hallazgo clave
+
+- **La versión B convierte más:** 15.96% frente a 12.57% de la versión A, una diferencia de **+3.38 puntos porcentuales** (26.92% más en términos relativos).
+- **La diferencia es estadísticamente significativa:** intervalo de confianza del 95% de +2.70 a +4.07 puntos y p = 4.3 × 10⁻²².
+- **Por canal y tipo de usuario no hay evidencia suficiente** para reasignar presupuesto: la diferencia por canal deja de ser significativa tras un ajuste por comparaciones múltiples (p = 0.0683).
+
+**Qué recomiendo:** evaluar un despliegue gradual de la versión B, después de validar la asignación del experimento y de medir el efecto en gasto, costos y margen.
 
 ## Resultados de conversión
 
